@@ -1,0 +1,127 @@
+.ekran-container {
+    display: flex;
+    min-height: 100vh;
+    background: #1a1a1a;
+}
+
+.ekran-column {
+    flex: 1;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.preparing-column {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.ready-column {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.ekran-title {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3vh;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+.orders-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    overflow-y: auto;
+}
+
+.order-display-card {
+    background: white;
+    padding: 3vh 4vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.preparing-card {
+    border-left: 10px solid #f6d365;
+}
+
+.ready-card {
+    border-left: 10px solid #84fab0;
+}
+
+.order-name {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.order-display-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #667eea;
+    background: #f0f0f0;
+    padding: 1vh 2vh;
+    border-radius: 15px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: 10vh;
+    font-weight: 600;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+    .ekran-title {
+        font-size: 3rem;
+    }
+
+    .order-name {
+        font-size: 2rem;
+    }
+
+    .order-display-number {
+        font-size: 2rem;
+    }
+
+    .empty-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ekran-container {
+        flex-direction: column;
+    }
+
+    .ekran-column {
+        min-height: 50vh;
+    }
+}
